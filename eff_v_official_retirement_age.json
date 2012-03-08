@@ -1,0 +1,138 @@
+{
+    "Mexico": {
+        "effective": "69.5",
+        "official": "65"
+    },
+    "South Korea": {
+        "effective": "69.8",
+        "official": "60"
+    },
+    "Iceland": {
+        "effective": "65.4",
+        "official": "67"
+    },
+    "Japan": {
+        "effective": "67.3",
+        "official": "62"
+    },
+    "New Zealand": {
+        "effective": "65.0",
+        "official": "65"
+    },
+    "Israel": {
+        "effective": "63.7",
+        "official": "62"
+    },
+    "Portugal": {
+        "effective": "63.6",
+        "official": "65"
+    },
+    "Chile": {
+        "effective": "66.3",
+        "official": "60"
+    },
+    "Estonia": {
+        "effective": "63.4",
+        "official": "61"
+    },
+    "Sweden": {
+        "effective": "63.6",
+        "official": "65"
+    },
+    "Switzerland": {
+        "effective": "63.5",
+        "official": "64"
+    },
+    "United States of America": {
+        "effective": "64.8",
+        "official": "65.8"
+    },
+    "Australia": {
+        "effective": "62.9",
+        "official": "64"
+    },
+    "Norway": {
+        "effective": "64.5",
+        "official": "67"
+    },
+    "Denmark": {
+        "effective": "61.9",
+        "official": "65"
+    },
+    "United Kingdom": {
+        "effective": "62.1",
+        "official": "60"
+    },
+    "Canada": {
+        "effective": "62.2",
+        "official": "65"
+    },
+    "Ireland": {
+        "effective": "63.7",
+        "official": "66"
+    },
+    "Turkey": {
+        "effective": "68.3",
+        "official": "58"
+    },
+    "Netherlands": {
+        "effective": "62.6",
+        "official": "65"
+    },
+    "Czech Republic": {
+        "effective": "59.0",
+        "official": "59"
+    },
+    "Slovenia": {
+        "effective": "59.2",
+        "official": "61"
+    },
+    "Greece": {
+        "effective": "59.6",
+        "official": "60"
+    },
+    "Finland": {
+        "effective": "61.4",
+        "official": "65"
+    },
+    "Germany": {
+        "effective": "60.5",
+        "official": "65"
+    },
+    "Spain": {
+        "effective": "63.4",
+        "official": "65"
+    },
+    "Poland": {
+        "effective": "58.5",
+        "official": "60"
+    },
+    "Italy": {
+        "effective": "58.7",
+        "official": "60"
+    },
+    "Hungary": {
+        "effective": "58.9",
+        "official": "62"
+    },
+    "Belgium": {
+        "effective": "59.1",
+        "official": "65"
+    },
+    "France": {
+        "effective": "59.7",
+        "official": "60"
+    },
+    "Austria": {
+        "effective": "57.5",
+        "official": "60"
+    },
+    "Luxembourg": {
+        "effective": "58.0",
+        "official": "65"
+    },
+    "Slovakia": {
+        "effective": "56.2",
+        "official": "62"
+    }
+}
