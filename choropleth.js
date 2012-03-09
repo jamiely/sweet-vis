@@ -1,4 +1,5 @@
 var data; // loaded asynchronously
+var dataRetirement;
 
 var xy = d3.geo.equirectangular()
     .scale(900),
@@ -11,15 +12,35 @@ var states = svg.append("g")
     .attr("id", "countries")
     .attr("class", "Blues");
 
+var popup = svg.append("g")
+    .attr("id", "popup");
+
+var popupText = popup.append("text")
+    .attr("id", "popupText")
+    .attr("x", 400)
+    .attr("y", 300);
+
 d3.json("world-countries.json", function(json) {
   states.selectAll("path")
       .data(json.features)
     .enter().append("path")
-      .attr("d", path);
+      .attr("d", path)
+    .on('mouseover', function(d) {
+      var countryData = dataRetirement[d.properties.name];
+      if(countryData) {
+        console.log(countryData.effective);
+        popupText.text(d.properties.name + ": " + countryData.effective + " years old");
+        d3.select(this).attr('opacity', 0.5);
+      }
+    })
+    .on('mouseout', function(){
+      d3.select(this).attr('opacity', 1);
+    });
 });
 
 d3.json("eff_v_official_retirement_age.json", function(json) {
   data = json;
+  dataRetirement = json;
   var dataValues = d3.values(data);
 
   var funParseProp = function(propName) {
@@ -45,7 +66,7 @@ function quantize(min, max, d) {
   if(data[name]) {
     // var className = "q" + Math.min(8, ~~(data[d.properties.name.effective] * 9 / 12)) + "-9";
     var value = parseFloat(data[name].effective);
-    var className = 'q' + (Math.floor(9 * (value - min)/(max-min))) + '-9'
+    var className = 'q' + (Math.floor(9 * (max - value)/(max-min))) + '-9'
     console.log(className);
     return className;
   }

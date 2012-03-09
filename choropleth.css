@@ -1,5 +1,5 @@
 svg {
-  background: #eee;
+  background: #fff;
   width: 960px;
   height: 500px;
 }
@@ -12,5 +12,13 @@ svg {
 #countries .missing {
   fill: #DDD;
   stroke-width: 0px;
+}
+
+#popup {
+  fill: #F00;
+}
+
+#popupText {
+  fill: #000;
 }
 
