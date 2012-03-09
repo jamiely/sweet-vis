@@ -17,7 +17,7 @@ var popup = svg.append("g")
 
 var popupText = popup.append("text")
     .attr("id", "popupText")
-    .attr("x", 400)
+    .attr("x", 200)
     .attr("y", 300);
 
 d3.json("world-countries.json", function(json) {
