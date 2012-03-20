@@ -3,9 +3,19 @@ var dataRetirement;
 
 var xy = d3.geo.equirectangular()
     .scale(900),
-  path = d3.geo.path().projection(xy)
+  path = d3.geo.path().projection(xy);
+
+var redraw = function() {
+  console.log(svg);
+  console.log("here", d3.event.translate, d3.event.scale);
+  states.attr("transform",
+      "translate(" + d3.event.translate + ")"
+      + " scale(" + d3.event.scale + ")");
+};
+
 
 var svg = d3.select("#chart")
+    .call(d3.behavior.zoom().on("zoom", redraw))
   .append("svg");
 
 var states = svg.append("g")
