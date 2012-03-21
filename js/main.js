@@ -1,4 +1,4 @@
-$(function(){
+(function(export){
   var dataDirectory = "./data/";
   var data; // loaded asynchronously
   var dataRetirement;
@@ -150,9 +150,7 @@ $(function(){
     }
   }
 
-
-
-  setTimeout(function(){
-  processLifeExpectancyJSON();
-  }, 250);
-});
+  export.selectDataSource = function(dataSourceName) {
+    processLifeExpectancyJSON();
+  };
+})(window);

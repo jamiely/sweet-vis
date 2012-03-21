@@ -1,3 +1,5 @@
+Based on D3's choropleth example.
+
 # [An End to the 'Golden Years': Increasing Longevity Changes the Work-leisure Equation](http://knowledge.wharton.upenn.edu/article.cfm?articleid=2643)
 
 * Rising retirement ages
