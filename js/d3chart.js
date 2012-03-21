@@ -83,7 +83,7 @@
       states.selectAll("path")
         .attr("class", curryQuantize);
     });
-  }
+  };
 
 
 
@@ -152,6 +152,17 @@
   }
 
   exports.selectDataSource = function(dataSourceName) {
-    processLifeExpectancyJSON();
+    switch(dataSourceName) {
+      case 'life_expectancy_all':
+        processLifeExpectancyCSV();
+        break;
+      case 'life_expectancy_limited':
+        processLifeExpectancyJSON();
+        break;
+      case 'effective_retirement_age':
+        break;
+      case 'official_retirement_age':
+        break;
+    }
   };
 })(window);
