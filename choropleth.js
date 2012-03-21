@@ -1,3 +1,4 @@
+$(function(){
 var data; // loaded asynchronously
 var dataRetirement;
 
@@ -48,72 +49,71 @@ d3.json("world-countries.json", function(json) {
     });
 });
 
-d3.json("life_expectancy.json", function(json) {
-  data = json;
-  dataLifeExpectancy = json;
-  var dataValues = d3.values(data);
-
-  var 
-    min = d3.min(dataValues),
-    max = d3.max(dataValues);
-
-  console.log("Min: " + min + "\nMax: " + max + "\n");
-
-  var curryQuantize = function(d) {
-    return quantizeLifeExpectancy(min, max, d);
-  };
-  states.selectAll("path")
-    .attr("class", curryQuantize);
-});
-d3.csv("life_expectancy.csv", function(csv) {
-  dataLifeExpectancy = csv;
-  data = {}
-  csv.forEach(function(item) {
-    data[item.Country] = item.LifeExpectancy;
+var processLifeExpectancyJSON = function() {
+  processLifeExpectancy(d3.json, "life_expectancy.json", function(json) {
+    return json;
   });
-  var dataValues = d3.values(data);
+};
+var processLifeExpectancyCSV = function() {
+  processLifeExpectancy(d3.csv, "life_expectancy.csv", function(csv) {
+    var data = {}
+    csv.forEach(function(item) {
+      data[item.Country] = item.LifeExpectancy;
+    });
+    return data;
+  });
+};
 
-  var 
-    min = d3.min(dataValues),
-    max = d3.max(dataValues);
+var processLifeExpectancy = function(parseFun, fn, dataFun) {
+  parseFun(fn, function(parsedData) {
+    data = dataFun(parsedData);
+    var dataValues = d3.values(data);
 
-  console.log("Min: " + min + "\nMax: " + max + "\n");
+    var 
+      min = d3.min(dataValues),
+      max = d3.max(dataValues);
 
-  var curryQuantize = function(d) {
-    return quantizeLifeExpectancy(min, max, d);
-  };
-  states.selectAll("path")
-    .attr("class", curryQuantize);
-});
-/*
-d3.json("eff_v_official_retirement_age.json", function(json) {
-  data = json;
-  dataRetirement = json;
-  var dataValues = d3.values(data);
+    console.log("Min: " + min + "\nMax: " + max + "\n");
 
-  var funParseProp = function(propName) {
-    return dataValues.map(function(v) { return parseFloat(v[propName]); });
-  };
+    var curryQuantize = function(d) {
+      return quantizeLifeExpectancy(min, max, d);
+    };
+    states.selectAll("path")
+      .attr("class", curryQuantize);
+  });
+}
 
-  var dataEff = funParseProp('effective'),
-    dataOff = funParseProp('official'),
-    min = d3.min(dataEff),
-    max = d3.max(dataEff);
 
-  console.log("Min: " + min + "\nMax: " + max + "\n");
 
-  var curryQuantize = function(d) {
-    return quantize(min, max, d);
-  };
-  states.selectAll("path")
-    .attr("class", curryQuantize);
-});
-*/
+var renderRetirementAge = function() {
+  d3.json("eff_v_official_retirement_age.json", function(json) {
+    data = json;
+    dataRetirement = json;
+    var dataValues = d3.values(data);
+
+    var funParseProp = function(propName) {
+      return dataValues.map(function(v) { return parseFloat(v[propName]); });
+    };
+
+    var dataEff = funParseProp('effective'),
+      dataOff = funParseProp('official'),
+      min = d3.min(dataEff),
+      max = d3.max(dataEff);
+
+    console.log("Min: " + min + "\nMax: " + max + "\n");
+
+    var curryQuantize = function(d) {
+      return quantize(min, max, d);
+    };
+    states.selectAll("path")
+      .attr("class", curryQuantize);
+  });
+}
+
 
 function quantizeLifeExpectancy(min, max, d) {
   var name = d.properties.name;
-  if(data[name]) {
-    // var className = "q" + Math.min(8, ~~(data[d.properties.name.effective] * 9 / 12)) + "-9";
+  if(data && data[name]) {
     var value = parseFloat(data[name]);
     var className = 'q' + (Math.floor(9 * (max - value)/(max-min))) + '-9'
     console.log(className);
@@ -151,3 +151,7 @@ function determine(d) {
 
 
 
+setTimeout(function(){
+processLifeExpectancyJSON();
+}, 250);
+});
