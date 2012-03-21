@@ -1,0 +1,3 @@
+LJT_prefs = {"release":"ragoon_a1","host":"http:\/\/www.lijit.com\/","image_tracking":"http:\/\/www.lijit.com\/","tracker_uri":"res\/images\/wijitTrack.gif","cacheID":"TODO","viewID":"","informerID":"8848669","informer_uri":"http:\/\/www.lijit.com\/users\/fm_audience","isQuantcastEnabled":true,"isCSyncEnabled":"true","isComscoreEnabled":true,"pubCategoryId":-1,"dataProviders":[],"threePTrackers":["http:\/\/r.nexac.com\/e\/getdata.xgi?dt=br&pkey=fjzb85mrpqk79&edr=off&ru=http%3A%2F%2Fwww.lijit.com%2Fdatalogix%2Fdata%3Fna_id%3D%3Cna_id%3E%26na_mp%3D%3Cna_mp%3E%26na_da%3D%3Cna_da%3E"],"beacon":"true","beacon_url":"http:\/\/beacon.lijit.com\/beacon"};
+
+LJTlite_jsonp(LJT_prefs);

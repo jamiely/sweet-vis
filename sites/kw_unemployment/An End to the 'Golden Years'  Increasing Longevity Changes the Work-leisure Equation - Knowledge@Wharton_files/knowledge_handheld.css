@@ -1,0 +1,112 @@
+/* ******************************************************************************** */
+/* Layout and Framework */
+/* ******************************************************************************** */
+
+		body{
+		font-family: 		"Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;;
+		font-size: 			.9em;
+		margin: 0;
+		padding: 0;
+		width:100%;
+		}
+		
+		#mainpage{
+			left:0px;
+			position:relative;
+			width:100%;
+			border:0px dotted blue;
+			top:58px;
+			background-color:#FAF6ED;				
+		}
+		#content{
+			position:relative;
+			left:00px;
+			border:1px solid white;
+			background-color: #FFFFFF;
+			width:100%;
+			line-height:100%;	
+		}
+
+		#comments{
+		display:none;
+		}
+		
+		#lhs, #rhs, #rhs #rhscontent, #lhs #lhscontent, #networkfooter, #header_img, {
+			display:none;
+		}
+
+		#footer{
+			left:0px;
+			clear:both;
+			position:relative;
+			z-index:1;
+			font-size:7pt;
+			font-family:verdana;
+			padding:5px 0px 3px 0px;
+			text-indent:25px;
+			background-color:orange;
+			color:#FFFFFF;
+		}
+				
+		#header_img{
+			display:none;
+		}	
+		#imgblock{
+			font-size:8pt;
+			border: 0px dotted black;
+			float: right;
+			line-height: 10pt;
+			padding: 15px 0px 10px 10px;
+		}
+		
+		
+		
+		#printlogo{
+			display:block;
+			position:absolute;
+			top:0px;
+			left:0px;
+			background-color:#DDDDC0;
+			border-bottom:1px solid white;
+			text-align:left;			
+		}		
+			
+
+		#topnavigation{
+			display:none;
+		}
+
+/* ******************************************************************************** */
+/* Fonts and Text */
+/* ******************************************************************************** */
+
+		#bodytext{
+
+		}		
+		
+		a.category_articletitle{
+			font-weight:bold;
+			line-height:125%;
+			font-family:verdana;
+			color:#990000;
+		}
+		
+	
+		.published{
+			padding-left:10px;
+			font-family:arial;
+			font-size:10px;
+		}
+
+		.bannerTitle{
+			display:none;
+		}
+
+
+
+/* ******************************************************************************** */
+/*  Elements of the Page + Padding and Spacing of Elements */
+/* ******************************************************************************** */
+
+
+

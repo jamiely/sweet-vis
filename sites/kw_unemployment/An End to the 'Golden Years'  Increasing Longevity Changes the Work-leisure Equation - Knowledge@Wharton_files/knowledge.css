@@ -1,0 +1,711 @@
+/* ******************************************************************************** */
+/* Layout and Framework */
+/* ******************************************************************************** */
+
+		body{
+			background: url("../templates/images/background.gif") repeat-y fixed 50% 50%;
+			color:#000;
+			margin: 0;
+			padding: 0; 
+			font-family: Verdana, Arial, Helvetica, sans-serif; 
+			text-align:left;
+			
+		}
+		
+		#wholepage {
+			
+			position:relative; 
+			border:0px;
+			margin-left:auto;
+			margin-right:auto;
+			width:1000px; 
+			
+		}
+			
+		#mainpage{
+			left:0px;
+			position:absolute;
+			width:1000px;
+			
+			top:188px;
+			vertical-align:top;
+			background-color:#FAF6ED;	
+			
+		}
+		#content{
+			position:relative;
+			left:200px;
+			background-color: #FFFFFF;
+			width:490px;
+			float:left;	
+			line-height:100%;	
+			border-right:1px solid #d2c5a5;
+			z-index:3;					
+		}
+		#lhs{
+			position:relative;
+			left:-491px;
+			z-index:1;
+			width:199px;
+			background-color:#FAF6ED;	
+			float:left;
+
+			
+		}
+		#rhs{
+			clear:right;		
+			background-color:#FAF6ED;	
+			color:silver;
+			width:310px;
+			float:right;
+			vertical-align:top;
+			z-index:2;
+		}
+		#footer{
+			width:1000px;
+			left:0px;
+			clear:both;
+			position:relative;
+			z-index:1;
+			text-indent:25px;
+			background-color:#f5b63e;
+		}
+		#footertext{
+			padding-top:10px 0px 20px 0px;
+			font-size:7pt;
+			font-family:verdana;
+			color:#000000;
+		}
+	
+		#networkfooter{
+			width: 1000px;
+			left: 0px;
+			clear: both;
+			position: relative;
+			z-index: 1;
+			font-size: 8pt;
+			font-family: arial;
+			padding: 5px 0px 5px 0px;
+			background-color: white;
+			border-bottom: 1px solid #D2C5A5;
+			border-top: 1px solid #D2C5A5;
+			text-align: center;
+			vertical-align: baseline;
+		}		
+
+		#networkfooter a{
+			color:maroon;
+			font-size:8pt;
+		}
+		
+
+		
+/* ******************************************************************************** */
+/* Fonts and Text */
+/* ******************************************************************************** */
+		a:hover{
+			color:#CC0000;
+		}
+		#bodytext{
+			padding:10px;
+			padding-top:0px;
+			font-family:verdana;
+			font-size:10pt;
+			line-height:125%;
+		}		
+		
+		#bodytext h2, #bodytext h4{
+			padding-left:0px; 
+		}
+		
+		#bodytext h2.bigTitle {
+			padding: 0 0 4px 0;
+		}
+		
+		
+		h3{
+			font-weight:bold;
+			line-height:125%;
+			font-family:arial,verdana;
+			font-size:10pt;
+			color:#666666;
+			padding:0px;
+			margin:0px;
+		}
+		
+	
+		a.category_articletitle{
+			font-weight:bold;
+			font-weight:normal;
+			text-decoration:none;
+			line-height:120%;
+			font-family:verdana;
+			font-family:garamond;
+			font-size:16pt;
+			color:#990000;
+		}
+		
+		hr.articleSeparator {
+			height: 1px;
+			visibility: display;
+			color: silver;
+			margin: 10px;
+		}
+		
+		a.homepage_articletitle{
+			font-weight:bold;
+			line-height:150%;
+			font-family:arial,verdana;
+			color:#990000;
+		}	
+	
+		.published{
+			padding-left:12px;
+			font-family:arial;
+			font-size:11px;
+		}
+
+	
+		h2{
+			font-family:garamond,times,verdana;
+			font-size:18pt;
+			margin:0px;
+			line-height:105%;
+			color:#AA0000;
+			padding:13px 10px 0px 10px;
+
+		}		
+
+		h5{
+			font-weight:bold;
+			font-family:arial;
+			color:maroon;
+			font-size:8pt;
+			margin:0px;
+			margin-top:15px;		
+		}
+		
+		h4{
+			font-family:garamond,verdana;
+			font-size:14pt;
+			margin:0px;
+			line-height:100%;
+			color:#AA0000;
+			padding:13px 10px 0px 10px;
+		}		
+		
+		.bannerTitle{
+			text-decoration: none; 
+			float:left; 
+			margin-left:-5000px;
+			font-size:8pt; 
+			color:black; 
+			text-indent: 0%; 
+		}
+
+/* ******************************************************************************** */
+/*  Elements of the Page + Padding and Spacing of Elements */
+/* ******************************************************************************** */
+
+
+		#rhs #rhscontent{
+			padding:5px;
+			padding-top:15px;
+
+		}
+		#lhs #lhscontent{
+			padding-top:15px;
+		}
+		
+		#header{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:1000px; background-color:#d1d1b1; padding:0px; border:0px;
+			   
+					
+		}
+		#fm_leaderboard{
+			position:relative;
+			text-align:center;
+			background: url("../templates/images/leaderbg.gif"); 
+		}
+
+		#banner{
+			position:relative;
+			left:0px;
+			width:1000px;
+			text-align:center; border:0px; padding:0px; 
+						
+		}			
+		#header_img{
+			position:relative;
+			left:0px;
+			width:1000px;
+			background-color:#DDDDC0;
+			border-bottom:1px solid white; 
+			text-align:center; 
+		}
+		.bannerleftlogo 
+			{
+				background:##3399CC; left:0px; top:0px; height:63px; position:absolute; background:none; display:block; text-decoration:none; border:0px;
+			}
+		.bannercenterlogo
+			{
+				background:##3399CC; top:0px; height:63px; position:absolute; background:none; display:block; text-decoration:none;	border:0px;
+			}	
+		#topnavigation{
+			position:relative;
+			left:0px;
+			width:1000px;
+			border-bottom:1px solid white;
+			background-color:#F5B63E;
+			background:#F5B63E url("http://knowledge.wharton.upenn.edu/templates/images/navbkgd.gif");						
+		}
+			
+
+		.sidenavigation{
+			padding:8px;
+			background-color:#F3E8CC;
+		}
+
+		
+		.key{
+		  display: none;
+		  padding-top:1px;
+		}		
+		#key1{
+			display:block;
+		}
+		#key1text{
+			font-weight:bold;
+		}
+		
+	
+		.rightblock, div.fontsizer, .leftblock , .networkfeeds
+		{
+			background-color:white;
+			border:1px solid #D2C5A5;
+			padding-bottom:5px;
+			margin-bottom:20px;
+			line-height:100%;
+		}
+		
+		#kw-twitter-follow {
+			float: left;
+			width: 190px;
+		}
+		
+		#kw-social-media {
+			margin-bottom: 10px;
+		}
+		
+		.sponsorlogo{
+			text-align:center;
+			padding-top:12px;
+		}
+		#sponsorlogos{
+			margin-top:40px;
+		}
+		#additionalsponsorlogos{
+			margin-top:20px;
+		}		
+		
+  		.homepageblock h3, .fontsizer h3, .rightblock h3, .relatedlinks h3, .leftblock h3, .networkfeeds h3, div.homepagedate{
+		background:#F3E8CC url("http://knowledge.wharton.upenn.edu/templates/images/h3background.gif");	
+		}
+
+		
+		div.fontsizer{
+			margin-left:0px;
+			padding:0px;
+			font-family:verdana;
+			font-family:arial;
+			font-size:8pt;
+			color:maroon;
+			/* width:105px;
+			text-align:center;
+			*/
+		}
+		.fontsizer h3
+		{
+			margin:0px;
+			margin-top:0px;
+			padding:3px;
+			padding-left:10px;
+			background-color:#F3E8CC;
+			color:maroon;
+			font-family:verdana;
+			font-family:arial;
+			font-size:9pt;
+			font-weight:bold;
+		}
+	
+		.rightblock h3, .relatedlinks h3, .leftblock h3, .networkfeeds h3
+		{
+			margin:0px;
+			margin-top:0px;
+			padding:3px;
+			padding-left:5px;
+			background-color:#F3E8CC;
+			color:maroon;
+			font-family:verdana;
+			font-family:arial;
+			font-size:9pt;
+			font-weight:bold;
+		}
+		.rightblock a, .networkfeeds a
+		{
+			font-family:verdana;
+			font-family:arial;
+			font-size:8pt;
+			color:#990000;
+			/*stuff to make it look like link class */
+		}
+		.internallink
+		{
+
+			text-decoration:none;
+			border-bottom:1px dotted;
+			/*stuff to make it look like link class */
+		}
+		.bookquote
+		{
+			margin: 0px 50px 0px 30px; font-style:italic; 
+		}
+		.noborder
+		{
+
+
+			color: white;
+			text-decoration:none;
+			border-style:none;
+			/*use to remove link borders around images */
+		}
+
+		.noborder:hover
+		{
+
+
+			color:#990000;
+			text-decoration:none;
+			/*use to remove link borders around images */
+		}
+
+		.vblockquote
+		{
+			float:right;
+			margin:20px 10px 5px 5px;
+			padding:3px 3px 3px 5px;
+			font-family:arial;color:#666666;
+			font-size:8pt;background-color:#cccccc; text-align:center;
+		}
+
+		.rightblock p a, .networkfeeds p a
+		{
+			color:#000000;
+			text-decoration:none;
+			/*stuff to make it look like link class */
+		}
+		.rightblock a:hover
+		{
+			color:#FF0000;
+		}
+
+		.rightblock p, .networkfeeds p
+		{
+			background-image:url("http://knowledge.wharton.upenn.edu/templates/images/arr.gif");
+			background-repeat:no-repeat;
+			margin:5px;
+			margin-left:10px;
+			border:0px solid black;
+			padding-left:7px;
+			line-height:9pt;
+			/*stuff to make it look like arrow class */
+		}
+		
+		.relatedlinks{
+			background-color:white;
+			border:1px solid #D2C5A5;
+			padding-bottom:5px;
+			margin-bottom:10px;
+			font-family:arial;
+			font-size:8pt;
+		}
+		
+		.relatedlinks .text{
+			margin:5px;
+			margin-left:10px;
+			padding-bottom:5px;
+			border:0px solid black;
+			padding-left:10px;
+			line-height:9pt;
+			/*stuff to make it look like arrow class */
+		
+		}
+		.keywords{
+		position:relative;
+		left:5px;
+		}
+		.rightblock keywords, .rightblock .related_text{
+			/*font-family:verdana;*/
+			font-family:arial;
+			font-size:8pt;
+			font-weight:normal;
+			padding-left:10px;
+		}
+		.rightblock .related_text{
+			color:maroon;	
+			font-weight:bold;						
+		}
+
+		.credit
+		{
+			margin-top:10px;
+			font-family:arial;
+			font-size:7pt;
+			color:#999999;
+			border:0px solid black;
+			/*stuff to make it look like credit class */
+		}
+		
+		
+		.homepageseperator{
+			background-color:#f5b63e;
+			border:0px;
+			color:#f5b63e;
+			clear:both;
+			height:2px;
+			/*visibility:hidden;*/
+			
+		}
+		div.homepagedate{
+			background-color:#f5b63e;
+			background-color:#d1d1b1;
+			background-color:#F3E8CC;
+			border-bottom:1px solid maroon;			
+			padding-left:5px;
+			margin-bottom:5px;
+			color:black;
+			clear:both;
+			color:maroon;
+			font-family:arial;
+			font-size:8pt;
+			font-weight:bold;
+			/*visibility:hidden;*/	
+		}
+
+		#homepageblockleft{
+			margin-top:15px;
+			margin-bottom:15px;
+			background-color:#faf6ed;
+			float:left;
+			border-bottom:0px dashed #AAAAAA; 
+			border:1px solid maroon;
+			vertical-align:top;
+		}
+		
+		#homepageblockright{
+			padding-top:15px;
+			float:right;
+			border-bottom:0px dashed #AAAAAA; 
+			width:270px;
+			vertical-align:top;
+		}
+		.homepageblock h3
+		{
+			margin:0px;
+			margin-top:0px;
+			padding:3px;
+			padding-left:5px;
+			background-color:#F3E8CC;
+			border-bottom:1px solid maroon;
+			color:maroon;
+			font-family:verdana;
+			font-family:arial;
+			font-size:9pt;
+			font-weight:bold;
+			display:block;
+		}
+		.homepageblock{		
+			vertical-align:top; 
+			padding-bottom:10px;
+		}
+		.homepageblock a{		
+			text-decoration:none;
+			color:#990000;
+		}
+
+		.homelogin{
+			padding:8px;
+			padding-bottom:0px;
+			font-size:8pt; 
+			font-family:arial;
+			color:#999999;
+		}
+		.homelogin input{
+			font-size:8pt; 
+			font-family:arial;
+			color:#0000000;
+		}		
+		
+		
+		a:hover{
+			color:#ff0000;
+		}
+
+		
+		A.sidenav{
+		  padding: 3px 0px 3px 0px;  
+		  font-family: Arial, sans-serif;
+		  font-size: 11px;
+		  margin-left: 0px;
+		  margin-right: 0px;  
+		  margin-top: 2px;
+		  text-decoration:none; 
+		  color: #000000;
+		  border-bottom: 1px solid white;
+		  display: block;
+		  line-height: 14px;
+		  text-indent: 5px;
+		  width:180px;  
+		 }
+		 
+		A.sidenav:hover{
+		 	color:black;
+		 	color:#660000;
+		 }
+				
+#graphicblock{
+	float:left; border:0px; margin:0px 10px 30px 10px;	
+	}
+
+
+
+		/* Next 3 classes are used for the more/previous buttons on the category.cfm page 
+			#cat_more_articles is the containing DIV, 
+			.catmore is the href class definition and 
+			.cat_arrow places the arrow icon a few px lower than the default text.
+		*/		 
+		 #category_more_articles{
+			padding:10px;
+			margin-left:20px;
+			margin-right:20px;
+		 }
+		 .catmore{
+			font-size:10pt;
+			font-family:arial;		 
+			text-decoration:none;
+		 }
+
+		img.cat_arrow{
+			vertical-align:text-top;
+		}		
+		 
+
+		INPUT#navsearch{
+			font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+			font-size : 7pt;
+			font-weight:normal;
+			color:silver;
+			width:100px;	
+			padding-right : 3px;
+			padding-left : 5px;
+		}
+
+		
+		/* Next 3 TD classes are for navigation for the top bar under the header */
+		td.navbar {
+			height:23px;
+			border-right:1px solid white;
+			text-align:center;
+			color:white;
+			font-family:arial;
+			font-size: 11px;
+			font-weight:bold;
+		}
+		td.navbar a{
+			padding: 3px 15px 3px 15px;
+			text-decoration:none;
+			color:white;
+		}
+
+
+		td.navbar a:hover{
+			color:black;
+		}
+		
+		
+		/*  Hides the K@W logo for the print view */
+		#printlogo{
+			display:none;
+		}
+
+		/*  This are just two test classes for hidden menus */
+		#hiddenmenu1, #hiddenmenu2{
+			z-index:-2;
+			border:5px solid #F5B63E;
+			width:565px;
+			height:200px;
+			background-color: #FAF6ED;
+			display:none;
+			position:absolute;
+			top:89px;
+			font-family: verdana;
+			font-size:9pt;
+			color:black;
+			left:185px;
+			}
+			
+		/*  This displays the choose your font-size on the RHS, set to 1 pixel in white
+		    The selected font size has a 1 pixel in maroon  */	
+		.fontsizeA{
+			border-bottom:3px solid white;
+			margin-right:3px;
+			border:1px solid white;
+			margin-right:1px;			
+		}		
+		
+
+	
+		
+/*****************************************************************************/
+/*	 Comments CSS															**/
+/*****************************************************************************/
+
+.commentnumber{
+color:#f3f3f3;
+margin-left:-25px;
+}
+.comment {
+ border:1px solid #cccccc;
+ padding: 0px 10px 3px 10px;
+ margin-bottom:10px;margin-top:0px;
+ clear:both;
+}
+.comment h3{
+	color:maroon;
+	margin:0px -10px 3px -10px;
+	padding:5px;
+	padding-left:30px;
+	margin-bottom:5px;
+	font-size:8pt;
+	background-color:#f3f3f3;
+	background:#F3E8CC url("http://knowledge.wharton.upenn.edu/templates/images/comment-h3.gif");		
+	border-bottom:1px solid maroon;
+}
+.commentbyline{
+border-top:1px dotted #cccccc;
+margin-top:5px;
+font-family:arial;
+color:#666666;
+}
+pre{
+font-family:verdana;
+font-size:inherit;
+display:block;
+width:auto;
+
+}
+table.cfdebug {position: absolute;  top: 9000px;}
+table.cfdebug * {position: relative; top: 0;}																
