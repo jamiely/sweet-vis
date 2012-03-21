@@ -1,4 +1,4 @@
-(function(export){
+(function(exports){
   var dataDirectory = "./data/";
   var data; // loaded asynchronously
   var dataRetirement;
@@ -38,6 +38,7 @@
       .enter().append("path")
         .attr("d", path)
       .on('mouseover', function(d) {
+        return;
         var countryData = dataRetirement[d.properties.name];
         if(countryData) {
           console.log(countryData.effective);
@@ -150,7 +151,7 @@
     }
   }
 
-  export.selectDataSource = function(dataSourceName) {
+  exports.selectDataSource = function(dataSourceName) {
     processLifeExpectancyJSON();
   };
 })(window);
