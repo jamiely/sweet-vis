@@ -87,7 +87,7 @@
 
 
 
-  var renderRetirementAge = function() {
+  var renderRetirementAge = function(useOfficial) {
     d3.json("eff_v_official_retirement_age.json", function(json) {
       data = json;
       dataRetirement = json;
@@ -99,8 +99,9 @@
 
       var dataEff = funParseProp('effective'),
         dataOff = funParseProp('official'),
-        min = d3.min(dataEff),
-        max = d3.max(dataEff);
+        dataTarget = useOfficial ? dataOff : dataEff,
+        min = d3.min(dataTarget),
+        max = d3.max(dataTarget);
 
       console.log("Min: " + min + "\nMax: " + max + "\n");
 
@@ -160,9 +161,10 @@
         processLifeExpectancyJSON();
         break;
       case 'effective_retirement_age':
-        renderRetirementAge();
+        renderRetirementAge(false);
         break;
       case 'official_retirement_age':
+        renderRetirementAge(true);
         break;
     }
   };
