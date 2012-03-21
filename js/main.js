@@ -13,7 +13,8 @@ $(function() {
   if(getSelectedDataSource().empty()) {
     $('input[name=data_source]:first').prop('checked', true);
   }
-  
+
   updateDataSource();
   $('input[name=data_source]').click(updateDataSource);
 });
+

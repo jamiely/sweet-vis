@@ -38,13 +38,14 @@
       .enter().append("path")
         .attr("d", path)
       .on('mouseover', function(d) {
-        return;
-        var countryData = dataRetirement[d.properties.name];
-        if(countryData) {
-          console.log(countryData.effective);
-          popupText.text(d.properties.name + ": " + countryData.effective + " years old");
-          d3.select(this).attr('opacity', 0.5);
-        }
+        if(!data) return;
+        var countryData = data[d.properties.name];
+
+        if(!countryData) return;
+
+        console.log(countryData.effective);
+        popupText.text(d.properties.name + ": " + countryData + " years old");
+        d3.select(this).attr('opacity', 0.5);
       })
       .on('mouseout', function(){
         d3.select(this).attr('opacity', 1);
