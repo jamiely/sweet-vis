@@ -160,9 +160,11 @@
         processLifeExpectancyJSON();
         break;
       case 'effective_retirement_age':
+        renderRetirementAge();
         break;
       case 'official_retirement_age':
         break;
     }
   };
 })(window);
+
