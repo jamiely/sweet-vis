@@ -139,7 +139,6 @@
   function quantize(min, max, d) {
     var name = d.properties.name;
     if(data[name]) {
-      // var className = "q" + Math.min(8, ~~(data[d.properties.name.effective] * 9 / 12)) + "-9";
       var value = parseFloat(data[name]);
       var className = 'q' + (Math.floor(9 * (max - value)/(max-min))) + '-9'
       console.log(className);
