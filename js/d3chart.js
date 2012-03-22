@@ -4,7 +4,7 @@
   var dataRetirement;
 
   var xy = d3.geo.equirectangular()
-      .scale(900),
+      .scale(600),
     path = d3.geo.path().projection(xy);
 
   var redraw = function() {
@@ -87,7 +87,7 @@
   };
 
   var renderRetirementAge = function(useOfficial) {
-    d3.json("eff_v_official_retirement_age.json", function(json) {
+    d3.json(dataDirectory + "eff_v_official_retirement_age.json", function(json) {
       data = json;
       dataRetirement = json;
       var dataValues = d3.values(data);

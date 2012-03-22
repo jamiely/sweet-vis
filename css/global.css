@@ -1,7 +1,9 @@
 svg {
   background: #fff;
-  width: 960px;
+  width: 800px;
   height: 500px;
+  position: relative;
+  left: -200px;
 }
 
 #countries path {
