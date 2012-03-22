@@ -86,8 +86,6 @@
     });
   };
 
-
-
   var renderRetirementAge = function(useOfficial) {
     d3.json("eff_v_official_retirement_age.json", function(json) {
       data = json;
@@ -98,11 +96,21 @@
         return dataValues.map(function(v) { return parseFloat(v[propName]); });
       };
 
+      var convertMap = function(map, field) {
+        var h = {};
+        for(var i in map) {
+          h[i] = map[i][field];
+        }
+        return h;
+      };
+
       var dataEff = funParseProp('effective'),
         dataOff = funParseProp('official'),
         dataTarget = useOfficial ? dataOff : dataEff,
         min = d3.min(dataTarget),
         max = d3.max(dataTarget);
+
+      data = convertMap(json, useOfficial ? 'official' : 'effective' );
 
       console.log("Min: " + min + "\nMax: " + max + "\n");
 
@@ -132,7 +140,7 @@
     var name = d.properties.name;
     if(data[name]) {
       // var className = "q" + Math.min(8, ~~(data[d.properties.name.effective] * 9 / 12)) + "-9";
-      var value = parseFloat(data[name].effective);
+      var value = parseFloat(data[name]);
       var className = 'q' + (Math.floor(9 * (max - value)/(max-min))) + '-9'
       console.log(className);
       return className;
